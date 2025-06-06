@@ -13,11 +13,11 @@
     <header>
         <!-- Your header content here -->
          <div>
-            <h1>Music Playlist Explorer</h1>
+            <h1 class="header-left">Music Playlist Explorer</h1>
         </div>
-        <div>
-            <a href="featured.html">Featured</a>
-            <a href="index.html">All</a>
+        <div class="header-right">
+            <a href="featured.html" class="nav-link">Featured</a>
+            <a href="index.html" class="nav-link">All</a>
 
 
             <!-- <ul>
@@ -30,10 +30,26 @@
 
     <main> 
         <!-- Your main content here -->
-        <section class="playlist-cards">
-            
-        <!-- cards will be inserted here dynamically -->
+         <section class="playlist-form-section">
+            <h2>Add a New Playlist</h2>
+            <form id="playlist-form">
+                <input type="text" id="playlist-title" placeholder="Playlist Title" required />
+                <input type="text" id="playlist-creator" placeholder="Creator" required />
+                <input type="text" id="playlist-image" placeholder="Image URL" required />
 
+                <div id="songs-container">
+                <h3>Songs</h3>
+                <!-- Songs will be added here  -->
+                </div>
+
+                <button type="button" id="add-song-btn">Add Song</button>
+                <button type="submit">Submit Playlist</button>
+            </form>
+        </section>
+
+
+        <section class="playlist-cards">   
+        <!-- cards will be inserted here dynamically -->
         </section>
     
     </main>
