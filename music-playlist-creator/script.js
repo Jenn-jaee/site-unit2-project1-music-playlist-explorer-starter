@@ -33,6 +33,11 @@ const renderPlaylistCard = (playlist, index) => {
   });
 
   section.appendChild(card);
+
+
+
+
+
 };
 
 // Render all playlists at start
@@ -94,11 +99,13 @@ const openModal = (playlist) => {
   };
 };
 
-// Playlist form logic
+// lets user add a Playlist (form logic)
 const form = document.getElementById('playlist-form');
 const songsContainer = document.getElementById('songs-container');
 const addSongBtn = document.getElementById('add-song-btn');
 let songInputs = [];
+
+//click action to add songs to playlist
 
 addSongBtn.addEventListener('click', () => {
   if (songsContainer.classList.contains('hidden')) {
@@ -117,6 +124,8 @@ addSongBtn.addEventListener('click', () => {
   songsContainer.appendChild(div);
   songInputs.push(div);
 });
+
+// click action to submit
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
