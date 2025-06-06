@@ -4,7 +4,7 @@ Submitted by: **Jennifer Obinwanne**
 
 Estimated time spent: **25+** hours spent in total
 
-Deployed Application (**required**): [Music Playlist Explorer Deployed Site]((https://site-unit2-project1-music-playlist-yrei.onrender.com))
+Deployed Application (**required**): [Music Playlist Explorer Deployed Site][https://site-unit2-project1-music-playlist-yrei.onrender.com]
 
 ---
 
@@ -97,6 +97,14 @@ The **Music Playlist Explorer** is an interactive web app that allows users to e
   - [ ] Not implemented yet
 
 ---
+
+
+### Sample Images
+![image](https://github.com/user-attachments/assets/6f9019d1-0532-4c2d-9fbc-feb98fba2411)
+![image](https://github.com/user-attachments/assets/ceedb995-9fa7-43e4-97b5-e0bdcc40f0c6)
+![image](https://github.com/user-attachments/assets/490b1b80-5b18-4e7c-bda4-bb01c6c999fb)
+
+
 
 ### Walkthrough Video
 
