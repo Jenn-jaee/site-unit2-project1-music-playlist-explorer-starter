@@ -1,13 +1,13 @@
 // Select main container for playlist cards
 const section = document.querySelector('.playlist-cards');
 
-// Dummy likes count
+// likes count
 let likeCounts = new Array(playlists.length).fill(0);
 
-// Render card function
 const renderPlaylistCard = (playlist, index) => {
   const card = document.createElement('div');
   card.classList.add('card');
+
   card.innerHTML = `
     <img src="${playlist.image}" alt="${playlist.title}">
     <div class="card-content">
@@ -15,31 +15,65 @@ const renderPlaylistCard = (playlist, index) => {
       <h4>Created by ${playlist.creator}</h4>
       <div class="like-container">
         <button class="like-btn" data-index="${index}">❤️</button>
-        <span class="like-count">${likeCounts[index]}</span>
+        <span class="like-count">${likeCounts[index]}</span> 
       </div>
+      <button class="delete-btn">🗑️ Delete</button>
     </div>
   `;
 
-  // Like or modal click handler
-  card.addEventListener('click', (e) => {
-    if (e.target.classList.contains('like-btn')) {
-      e.stopPropagation();
-      const i = +e.target.dataset.index;
-      likeCounts[i]++;
-      e.target.nextElementSibling.textContent = likeCounts[i];
-    } else {
-      openModal(playlist);
-    }
+ card.querySelector('.like-btn').addEventListener('click', (e) => {
+  e.stopPropagation(); // Don't open the modal
+  const btn = e.target;
+  const i = +btn.dataset.index;
+  // Check if already liked (using class to track)
+  const isLiked = btn.classList.contains('liked');
+  if (isLiked) {
+    likeCounts[i]--;
+    btn.classList.remove('liked');
+    btn.textContent = '❤️'; // outline heart (unliked)
+  } else {
+    likeCounts[i]++;
+    btn.classList.add('liked');
+    btn.textContent = '💖'; // filled heart (liked)
+  }
+  // Update the like count
+  btn.nextElementSibling.textContent = likeCounts[i];
+});
+
+  // Delete Button
+  card.querySelector('.delete-btn').addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent modal
+    card.remove(); // remove this card from the DOM
+    playlists.splice(index, 1); // remove from data
+    likeCounts.splice(index, 1); // keep like counts in sync
+  });
+
+  //  Modal trigger (if card area is clicked)
+  card.addEventListener('click', () => {
+    openModal(playlist);
   });
 
   section.appendChild(card);
-
-
-
-
-
 };
 
+//     //delete button
+//   card.addEventListener('click', (e)=> {
+//     if(e.target.classList.contains('delete-container')) {
+//         deleteButton(playlist);
+// } else {
+//      e.stopPropagation();
+// }} )
+    
+
+//delete card function
+// const deleteButton = (playcard) =>{
+//   const deleteBtn = document.createElement('div');
+//   deleteBtn.classList.add('card');
+//   deleteBtn.innerHTML = `<div class="delete-container">
+//         <button class = "delete-button">delete</button>
+//     </div>`
+//     return deleteBtn;
+// }
 // Render all playlists at start
 playlists.forEach((playlist, index) => {
   renderPlaylistCard(playlist, index);
