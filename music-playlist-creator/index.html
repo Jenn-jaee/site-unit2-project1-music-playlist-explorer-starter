@@ -8,24 +8,37 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <!-- Your header content here -->
-         <div>
-            <h1 class="header-left">Music Playlist Explorer</h1>
+    <header class="header">
+        <div class="header-left">
+            <h1>Music Playlist Explorer</h1>
         </div>
+
         <div class="header-right">
             <a href="featured.html" class="nav-link">Featured</a>
             <a href="index.html" class="nav-link">All</a>
 
+            <!-- Search form -->
+            <div class="search-container">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search playlists..."
+            />
+            <button id="search-btn">🔍</button>
+            </div>
+            <div class="sort-bar">
+                <select id="sort-dropdown">
+                    <option value="">Sort By</option>
+                    <option value="az">Name (A - Z)</option>
+                    <option value="za">Name (Z - A)</option>
+                    <option value="likes">Most Liked</option>
+                </select>
+            </div>
 
-            <!-- <ul>
-                <li id="featured-playlist">Featured</li>
-                <li id="all">All</li>
-            </ul> -->
         </div>
-         
     </header>
 
     <main> 
@@ -67,3 +80,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
+

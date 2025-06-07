@@ -111,7 +111,7 @@ transition: transform 0.2s ease-in-out;
 
 
 .like-container {
-  width: 100%;
+  width: fit-content;
   display: flex;
   justify-content: center;  /* 👈 Center horizontally */
   align-items: center;
@@ -435,6 +435,11 @@ transition: transform 0.2s ease-in-out;
 .icon-button:hover {
   color: #007bff;
   transform: scale(1.05);
+}
+
+.spread{
+    display:flex;
+    justify-content: space-between;
 }
 
 

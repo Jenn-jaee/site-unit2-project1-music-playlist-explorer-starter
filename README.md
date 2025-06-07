@@ -19,12 +19,14 @@ The **Music Playlist Explorer** is an interactive web app that allows users to e
 #### CORE FEATURES
 
 - [x] **Display Playlists**
+
   - [x] Dynamically render playlists on the homepage using JavaScript.
     - [x] Playlists are displayed in a responsive grid layout.
     - [x] Playlist images are sized to fit at least 6 visible cards per row on wider screens.
   - [x] Fetch data from a provided JavaScript file and render each playlist as a card.
 
 - [x] **Playlist Components**
+
   - [x] Each tile displays:
     - [x] Playlist cover image
     - [x] Playlist name
@@ -32,6 +34,7 @@ The **Music Playlist Explorer** is an interactive web app that allows users to e
     - [x] Like count with ❤️ button
 
 - [x] **Playlist Details**
+
   - [x] Clicking a playlist opens a modal popup with:
     - [x] Cover image
     - [x] Playlist name
@@ -46,12 +49,14 @@ The **Music Playlist Explorer** is an interactive web app that allows users to e
     - [x] Uses a semi-dark backdrop to highlight the popup
 
 - [x] **Like Playlists**
+
   - [x] Users can like/unlike playlists by clicking the heart icon.
     - [x] Clicking ❤️ toggles the count and updates the visual state.
     - [x] Like state reflects both zero and non-zero transitions.
     - [x] Proper event delegation prevents modal from opening if the heart is clicked.
 
 - [x] **Shuffle Songs**
+
   - [x] A “Shuffle” button in the modal reorders the songs randomly.
     - [x] Shuffle logic re-renders the song list with a fresh order on each click.
     - [x] Repeated clicks show different song sequences.
@@ -70,6 +75,7 @@ The **Music Playlist Explorer** is an interactive web app that allows users to e
 #### STRETCH FEATURES
 
 - [x] **Add New Playlists**
+
   - [x] A form allows users to add new playlists directly on the homepage.
   - [x] Users can enter:
     - [x] Playlist title
@@ -85,26 +91,22 @@ The **Music Playlist Explorer** is an interactive web app that allows users to e
   - [x] The "Add Song" button is styled subtly with an icon and opens the fields only on click.
 
 - [ ] **Edit Existing Playlists**
+
   - [ ] In Progress
 
-- [ ] **Delete Playlists**
-  - [ ] In Progress
+- [x] **Delete Playlists**
 
-- [ ] **Search Functionality**
-  - [ ] Not implemented yet
+- [x] **Search Functionality**
 
-- [ ] **Sorting Options**
-  - [ ] Not implemented yet
+- [x] **Sorting Options**
 
 ---
 
-
 ### Sample Images
+
 ![image](https://github.com/user-attachments/assets/6f9019d1-0532-4c2d-9fbc-feb98fba2411)
 ![image](https://github.com/user-attachments/assets/ceedb995-9fa7-43e4-97b5-e0bdcc40f0c6)
 ![image](https://github.com/user-attachments/assets/490b1b80-5b18-4e7c-bda4-bb01c6c999fb)
-
-
 
 ### Walkthrough Video
 
@@ -113,6 +115,7 @@ The **Music Playlist Explorer** is an interactive web app that allows users to e
 `ADD_EMBEDDED_CODE_HERE`
 
 Make sure to:
+
 - Like and unlike both a 0-like and non-zero-like playlist
 - Shuffle songs multiple times
 - Add a playlist with 2+ songs
@@ -143,5 +146,6 @@ None — all code written from scratch with HTML, CSS, and JavaScript.
 ### Shout out
 
 Big shout out to:
+
 - My mentor(s) and cohort peers for debugging help
 - My future self for not giving up when the modal broke everything the night before 🎯
