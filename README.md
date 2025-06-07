@@ -112,7 +112,7 @@ The **Music Playlist Explorer** is an interactive web app that allows users to e
 
 `TODO://` Add the embedded URL code to your walkthrough video below.
 
-`ADD_EMBEDDED_CODE_HERE`
+`https://www.loom.com/share/2f51a23302d14222a986e7eea8983239?sid=6bfe9db0-5eb5-41d3-afe1-39cf4ba8996d`
 
 Make sure to:
 
